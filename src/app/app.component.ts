@@ -23,8 +23,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dataSource = ELEMENT_DATA;
   displayedColumns: string[] = ['id', 'artist',  'name'];
+  dataSource = ELEMENT_DATA;
   @ViewChild('audioOption') audioOption!: ElementRef;
   audioPath!: string
 
