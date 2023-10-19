@@ -1,0 +1,9 @@
+.audioPlayer {
+  text-align: center;
+  margin: 20px;
+}
+
+tr.example-element-row:hover {
+  background: whitesmoke;
+  cursor: pointer;
+}
