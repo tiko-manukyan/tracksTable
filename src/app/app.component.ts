@@ -1,14 +1,14 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 
-export interface PeriodicElement {
+export interface ArrayOfSongs {
   name: string;
   id: number;
   artist: string;
   url: string
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const SONGS_DATA: ArrayOfSongs[] = [
   {id: 1, name: 'Sister Golden Hair', artist: 'Some Guys', url: 'https://www.jonathancoulton.com/wp-content/uploads/encodes/Some_Guys/mp3/01_Sister_Golden_Hair_mp3_8961f17.mp3'},
   {id: 2, name: 'Wake Up', artist: 'Solid State', url: 'https://www.jonathancoulton.com/wp-content/uploads/encodes/Solid_State/mp3/01_Wake_Up_mp3_a024ffd.mp3'},
   {id: 3, name: 'Glasses', artist: 'Artificial Heart', url: 'https://www.jonathancoulton.com/wp-content/uploads/encodes/Artificial_Heart/mp3/07_Glasses_mp3_048e1ad.mp3'},
@@ -24,9 +24,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AppComponent {
   displayedColumns: string[] =  ['id', 'artist',  'name'];
-  dataSource = ELEMENT_DATA;
+  dataSource = SONGS_DATA;
   @ViewChild('audioOption') audioOption!: ElementRef;
-  audioPath!: string
+  audioPath = ''
 
   onPlaySound(audioSrc: string) {
     this.audioPath = audioSrc
